@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Test login wax
+          Auto Cat Game
         </p>
         <Waxtest />
       </header>
