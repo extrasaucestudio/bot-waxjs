@@ -156,8 +156,8 @@ class Waxtest extends React.Component {
     checkToken = async (account_name) => {
 
         try {
-            let cat1 = await axios.post(`https://chain.wax.io/v1/chain/get_currency_balance`, { code: "funnycatsnft", account: account_name, symbol: "RMX" });
-            let catnip1 = await axios.post(`https://chain.wax.io/v1/chain/get_currency_balance`, { code: "funnycatsnft", account: account_name, symbol: "WAX" });
+            let cat1 = await axios.post(`https://chain.wax.io/v1/chain/get_currency_balance`, { code: "remixgamingx", account: account_name, symbol: "RMX" });
+            let catnip1 = await axios.post(`https://chain.wax.io/v1/chain/get_currency_balance`, { code: "eosio.token", account: account_name, symbol: "WAX" });
             if (cat1) {
                 this.setState({
                     cat: cat1.data[0],
