@@ -76,15 +76,14 @@ class Waxtest extends React.Component {
         let tx = null;
         try {
             const actions = [{
-                account: "funnycatgame",
-                name: 'claim',
+                account: "freecitygamx",
+                name: 'claimstake',
                 authorization: [{
                     actor: this.state.wax.userAccount,
                     permission: "active",
                 },],
                 data: {
-                    owner: this.state.wax.userAccount,
-                    slot_id: slot
+                    wallet: this.state.wax.userAccount,
                 },
             },];
             tx = await this.state.wax.api.transact({
@@ -98,7 +97,7 @@ class Waxtest extends React.Component {
     }
     CatTools = async () => {
         const res = await this.state.wax.rpc.get_table_rows({
-            code: "funnycatgame",
+            code: "freecitygamx",
             index_position: 1,
             json: true,
             key_type: "",
@@ -107,7 +106,7 @@ class Waxtest extends React.Component {
             reverse: false,
             scope: this.state.wax.userAccount,
             show_payer: false,
-            table: "staking",
+            table: "users",
             upper_bound: "",
         });
         try {
