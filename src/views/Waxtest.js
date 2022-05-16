@@ -156,8 +156,8 @@ class Waxtest extends React.Component {
     checkToken = async (account_name) => {
 
         try {
-            let cat1 = await axios.post(`https://chain.wax.io/v1/chain/get_currency_balance`, { code: "funnycatsnft", account: account_name, symbol: "CAT" });
-            let catnip1 = await axios.post(`https://chain.wax.io/v1/chain/get_currency_balance`, { code: "funnycatsnft", account: account_name, symbol: "CATNIP" });
+            let cat1 = await axios.post(`https://chain.wax.io/v1/chain/get_currency_balance`, { code: "funnycatsnft", account: account_name, symbol: "RMX" });
+            let catnip1 = await axios.post(`https://chain.wax.io/v1/chain/get_currency_balance`, { code: "funnycatsnft", account: account_name, symbol: "WAX" });
             if (cat1) {
                 this.setState({
                     cat: cat1.data[0],
@@ -230,7 +230,7 @@ class Waxtest extends React.Component {
                         let m = this.checkTime(allTools[i].start_time) + (30 * 60);
                         if (m < t) {
                             await this.CatClaim(allTools[i].slot_id);
-                            await delay(30000);
+                            await delay(86000);
                         }
                     }
 
